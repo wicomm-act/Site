@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-22T16:54:50Z",
+  "title": "Design System: WICOMM",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Black",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26.43% 0 0)",
+          "oklch(37.86% 0 0)",
+          "oklch(49.29% 0 0)",
+          "oklch(60.71% 0 0)",
+          "oklch(72.14% 0 0)",
+          "oklch(83.57% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "fg": {
+        "role": "neutral",
+        "displayName": "White",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26.43% 0 0)",
+          "oklch(37.86% 0 0)",
+          "oklch(49.29% 0 0)",
+          "oklch(60.71% 0 0)",
+          "oklch(72.14% 0 0)",
+          "oklch(83.57% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Supporting gray",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26.43% 0 0)",
+          "oklch(37.86% 0 0)",
+          "oklch(49.29% 0 0)",
+          "oklch(60.71% 0 0)",
+          "oklch(72.14% 0 0)",
+          "oklch(83.57% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Divider gray",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26.43% 0 0)",
+          "oklch(37.86% 0 0)",
+          "oklch(49.29% 0 0)",
+          "oklch(60.71% 0 0)",
+          "oklch(72.14% 0 0)",
+          "oklch(83.57% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Charcoal panel",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26.43% 0 0)",
+          "oklch(37.86% 0 0)",
+          "oklch(49.29% 0 0)",
+          "oklch(60.71% 0 0)",
+          "oklch(72.14% 0 0)",
+          "oklch(83.57% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "panel-raised": {
+        "role": "neutral",
+        "displayName": "Raised charcoal",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26.43% 0 0)",
+          "oklch(37.86% 0 0)",
+          "oklch(49.29% 0 0)",
+          "oklch(60.71% 0 0)",
+          "oklch(72.14% 0 0)",
+          "oklch(83.57% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Neon green",
+        "tonalRamp": [
+          "oklch(15.00% 0.25784 136.966)",
+          "oklch(26.43% 0.25784 136.966)",
+          "oklch(37.86% 0.25784 136.966)",
+          "oklch(49.29% 0.25784 136.966)",
+          "oklch(60.71% 0.25784 136.966)",
+          "oklch(72.14% 0.25784 136.966)",
+          "oklch(83.57% 0.25784 136.966)",
+          "oklch(95.00% 0.25784 136.966)"
+        ]
+      },
+      "accent-hover": {
+        "role": "primary",
+        "displayName": "Hover green",
+        "tonalRamp": [
+          "oklch(15.00% 0.20169 134.924)",
+          "oklch(26.43% 0.20169 134.924)",
+          "oklch(37.86% 0.20169 134.924)",
+          "oklch(49.29% 0.20169 134.924)",
+          "oklch(60.71% 0.20169 134.924)",
+          "oklch(72.14% 0.20169 134.924)",
+          "oklch(83.57% 0.20169 134.924)",
+          "oklch(95.00% 0.20169 134.924)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Section headline",
+        "purpose": "Shared home section headlines; invitation uses weight 800."
+      },
+      "title": {
+        "displayName": "Member title",
+        "purpose": "Featured member names; roster names use a denser 19px variant."
+      },
+      "body": {
+        "displayName": "Supporting copy",
+        "purpose": "Section-intro and invitation paragraphs; not a global body size."
+      },
+      "label": {
+        "displayName": "Action label",
+        "purpose": "Shared primary-action text."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Desktop code examples; technical annotations use smaller mono variants."
+      }
+    },
+    "shadows": [
+      {
+        "name": "member-hover",
+        "value": "0 8px 20px color-mix(in srgb, var(--bg) 45%, transparent), 0 0 0 1px var(--line)",
+        "purpose": "Member-card hover only, with translateY(-4px)."
+      },
+      {
+        "name": "profile-modal",
+        "value": "0 28px 90px color-mix(in srgb, var(--bg) 70%, transparent)",
+        "purpose": "Native profile dialog; backdrop uses 75% black and blur(4px)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "shared-action",
+        "value": "background .2s, color .2s",
+        "purpose": "Shared filled and outlined action transitions."
+      },
+      {
+        "name": "filter",
+        "value": "background 160ms ease, color 160ms ease",
+        "purpose": "Roster filter state transitions."
+      },
+      {
+        "name": "member-card",
+        "value": "transform 180ms ease, box-shadow 180ms ease",
+        "purpose": "Roster hover lift and shadow."
+      },
+      {
+        "name": "led",
+        "value": "background .15s",
+        "purpose": "LED bulb color transition."
+      },
+      {
+        "name": "blink-interval",
+        "value": "800ms",
+        "purpose": "Opt-in JavaScript toggle interval; stop control remains available. Reduced-motion CSS does not cancel it."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "(prefers-reduced-motion: reduce)",
+        "purpose": "Remove CSS animation/transitions, smooth scrolling, and roster hover transforms."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "profile-stack-max",
+        "value": "440px"
+      },
+      {
+        "name": "home-stack-max",
+        "value": "600px"
+      },
+      {
+        "name": "roster-rail-stack-max",
+        "value": "700px"
+      },
+      {
+        "name": "compact-navigation-max",
+        "value": "800px"
+      },
+      {
+        "name": "roster-two-columns-max",
+        "value": "1000px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1100px"
+      },
+      {
+        "name": "wide-roster-min",
+        "value": "1400px"
+      },
+      {
+        "name": "tall-hero-min",
+        "value": "1500px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Green filled action with the shipped SVG arrow and keyboard focus.",
+      "html": "<button type=\"button\" class=\"ds-primary\">Turn LED on<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:25px;min-height:50px;padding:14px 21px;border:0;border-radius:6px;background:var(--accent,#7dff2a);color:#000;font-family:var(--font-display,Montserrat),sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:background .2s,color .2s}.ds-primary:not(:disabled):hover{background:var(--accent-hover,#a5ff6b)}.ds-primary:focus-visible{outline:3px solid var(--accent,#7dff2a);outline-offset:5px}.ds-primary:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Inverse invitation action",
+      "kind": "button",
+      "refersTo": "button-inverse",
+      "description": "Black action on the existing green invitation surface.",
+      "html": "<div class=\"ds-inverse-canvas\"><a href=\"/team/u/NNM23AC034\" class=\"ds-inverse\">Connect with us<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></div>",
+      "css": ".ds-inverse-canvas{background:var(--accent,#7dff2a);padding:34px 25px}.ds-inverse{display:inline-flex;align-items:center;justify-content:center;gap:25px;min-height:50px;padding:14px 21px;border:0;border-radius:6px;background:#000;color:#fff;font-family:var(--font-display,Montserrat),sans-serif;font-size:12px;font-weight:700;text-decoration:none;transition:background .2s,color .2s}.ds-inverse:hover{background:#242424}.ds-inverse:focus-visible{outline:3px solid #000;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-inverse{transition:none}}"
+    },
+    {
+      "name": "Outlined navigation action",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Compact outlined link, green on hover; hidden in site navigation at 800px and below.",
+      "html": "<a href=\"/#get-involved\" class=\"ds-outline\">Let’s build<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-outline{display:inline-flex;align-items:center;gap:25px;padding:12px 18px;border:1px solid #484848;border-radius:6px;color:var(--fg,#f5f5f5);font-family:var(--font-display,Montserrat),sans-serif;font-size:12px;font-weight:650;text-decoration:none;transition:background .2s,color .2s}.ds-outline:hover{background:var(--accent,#7dff2a);color:#000}.ds-outline:focus-visible{outline:3px solid var(--accent,#7dff2a);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-outline{transition:none}}"
+    },
+    {
+      "name": "Blink text action",
+      "kind": "button",
+      "description": "Underlined secondary LED control; live application supplies pressed state and timer.",
+      "html": "<button type=\"button\" class=\"ds-blink\" aria-pressed=\"false\">Run blink</button>",
+      "css": ".ds-blink{background:transparent;color:#e0e0e0;border:0;border-bottom:1px solid #777;padding:7px 0;font-family:var(--font-display,Montserrat),sans-serif;font-size:11px;cursor:pointer}.ds-blink:hover{color:var(--accent,#7dff2a)}.ds-blink:focus-visible{outline:3px solid var(--accent,#7dff2a);outline-offset:5px}"
+    },
+    {
+      "name": "Roster search",
+      "kind": "input",
+      "refersTo": "search",
+      "description": "Labeled search with a shared focus-within outline rather than an input-only ring.",
+      "html": "<label class=\"ds-search\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\" stroke=\"currentColor\" stroke-width=\"1.6\"/><path d=\"m16 16 4.5 4.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/></svg><span class=\"ds-search-label\">Search team by name, role, or USN</span><input type=\"search\" placeholder=\"Search by name, role or USN\" autocomplete=\"off\"/></label>",
+      "css": ".ds-search{display:flex;align-items:center;gap:13px;width:min(100%,520px);padding:0 17px;background:var(--panel,#101010);border:1px solid var(--line,#2b2b2b);border-radius:5px;color:var(--muted,#a6a6a6)}.ds-search svg{flex-shrink:0}.ds-search:focus-within{outline:2px solid var(--accent,#7dff2a);outline-offset:3px}.ds-search input{width:100%;min-width:0;height:50px;border:0;outline:0;background:transparent;color:var(--fg,#f5f5f5);font-family:var(--font-display,Montserrat),sans-serif;font-size:14px;caret-color:var(--accent,#7dff2a)}.ds-search input::placeholder{color:var(--muted,#a6a6a6);opacity:1}.ds-search-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}"
+    },
+    {
+      "name": "Main navigation links",
+      "kind": "nav",
+      "description": "Quiet links with white current text and a green dot; Home and team remain on phones.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"/\" aria-current=\"page\">Home</a><a href=\"/#explore\" class=\"ds-nav-explore\">What we explore</a><a href=\"/team\">The team</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:32px;background:var(--bg,#000);font-family:var(--font-display,Montserrat),sans-serif}.ds-nav a{position:relative;font-size:12px;padding-block:13px;color:var(--muted,#a6a6a6);font-weight:600;text-decoration:none}.ds-nav a:hover,.ds-nav a[aria-current]{color:var(--fg,#f5f5f5)}.ds-nav a[aria-current]::after{content:'';position:absolute;bottom:2px;left:calc(50% - 2px);width:4px;height:4px;border-radius:50%;background:var(--accent,#7dff2a)}.ds-nav a:focus-visible{outline:3px solid var(--accent,#7dff2a);outline-offset:5px}@media(max-width:1100px){.ds-nav{gap:21px}}@media(max-width:800px){.ds-nav{gap:24px}}@media(max-width:600px){.ds-nav{gap:18px}.ds-nav a{font-size:10px}.ds-nav .ds-nav-explore{display:none}}"
+    },
+    {
+      "name": "Topic tags",
+      "kind": "chip",
+      "description": "Noninteractive outlined hardware/topic labels, not filter buttons.",
+      "html": "<ul class=\"ds-tags\" aria-label=\"Topics\"><li>ESP32</li><li>STM32</li><li>Sensors &amp; circuits</li></ul>",
+      "css": ".ds-tags{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;margin:17px 0 0;font-family:var(--font-display,Montserrat),sans-serif}.ds-tags li{font-size:10px;padding:5px 9px;border:1px solid var(--line,#2b2b2b);border-radius:4px;color:#bcbcbc}@media(max-width:600px){.ds-tags li{font-size:9px}}"
+    },
+    {
+      "name": "Section filter",
+      "kind": "chip",
+      "refersTo": "filter",
+      "description": "Pressed-state filter samples; application logic changes selection and roster results.",
+      "html": "<div class=\"ds-filters\" role=\"group\" aria-label=\"Filter team by section\"><button type=\"button\" aria-pressed=\"true\">All members</button><button type=\"button\" aria-pressed=\"false\">Leadership</button></div>",
+      "css": ".ds-filters{display:flex;flex-wrap:wrap;gap:8px}.ds-filters button{min-height:40px;padding:9px 15px;border:0;border-radius:4px;color:var(--fg,#f5f5f5);background:var(--panel-raised,#191919);font-family:var(--font-display,Montserrat),sans-serif;font-size:12px;font-weight:600;cursor:pointer;transition:background 160ms ease,color 160ms ease}.ds-filters button:hover{background:var(--line,#2b2b2b)}.ds-filters button[aria-pressed=true]{color:var(--bg,#000);background:var(--accent,#7dff2a)}.ds-filters button:focus-visible{outline:2px solid var(--accent,#7dff2a);outline-offset:4px}@media(max-width:700px){.ds-filters{gap:6px}.ds-filters button{padding-inline:12px;font-size:11px}}@media(prefers-reduced-motion:reduce){.ds-filters button{transition:none}}"
+    },
+    {
+      "name": "Member card surface",
+      "kind": "card",
+      "refersTo": "member-card",
+      "description": "Roster card with a real member’s square initials fallback, hover lift, and SVG arrow.",
+      "html": "<a class=\"ds-card\" href=\"/team/u/NNM23AC034\" aria-label=\"Md Farhan Riaz, President. View profile\"><div class=\"ds-card-photo\" aria-hidden=\"true\"><span class=\"ds-card-initials\">MF</span><span class=\"ds-card-corner\"></span><span class=\"ds-card-arrow\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M6 18 18 6M6 6h12v12\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></div><div class=\"ds-card-body\"><h3>Md Farhan Riaz</h3><p>President</p></div></a>",
+      "css": ".ds-card{min-width:0;display:block;padding:8px;color:var(--fg,#f5f5f5);background:var(--panel,#101010);border-radius:6px;text-decoration:none;font-family:var(--font-display,Montserrat),sans-serif;transition:transform 180ms ease,box-shadow 180ms ease}.ds-card:hover{transform:translateY(-4px);box-shadow:0 8px 20px color-mix(in srgb,var(--bg,#000) 45%,transparent),0 0 0 1px var(--line,#2b2b2b)}.ds-card:focus-visible{outline:2px solid var(--accent,#7dff2a);outline-offset:4px}.ds-card-photo{position:relative;display:grid;place-items:center;width:100%;aspect-ratio:1;overflow:hidden;isolation:isolate;container-type:inline-size;color:var(--fg,#f5f5f5);background:var(--panel-raised,#191919);border-radius:3px}.ds-card-initials{font-size:30cqw;font-weight:750;line-height:1;letter-spacing:-.04em;user-select:none}.ds-card-corner{position:absolute;top:12px;left:12px;width:12px;height:12px;border-top:1px solid var(--line,#2b2b2b);border-left:1px solid var(--line,#2b2b2b)}.ds-card-photo::after{content:'';position:absolute;right:12px;bottom:12px;width:12px;height:12px;border-right:1px solid var(--line,#2b2b2b);border-bottom:1px solid var(--line,#2b2b2b);z-index:-1}.ds-card-arrow{position:absolute;right:10px;bottom:10px;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;color:var(--bg,#000);background:var(--accent,#7dff2a);transition:background 180ms ease,transform 180ms ease}.ds-card:hover .ds-card-arrow{background:var(--accent-hover,#a5ff6b);transform:rotate(45deg)}.ds-card-body{padding:18px 10px 10px}.ds-card-body h3{min-height:2.6em;margin:0 0 7px;font-size:19px;font-weight:750;line-height:1.3;letter-spacing:-.04em;overflow-wrap:anywhere}.ds-card-body p{margin:0 0 14px;overflow-wrap:anywhere;color:var(--muted,#a6a6a6);font-size:11px;line-height:1.6;letter-spacing:.035em;text-transform:uppercase}@media(max-width:440px){.ds-card{padding:6px}.ds-card-body{padding:14px 5px 8px}.ds-card-body h3{font-size:17px;min-height:3.9em;margin-bottom:12px}.ds-card-body p{min-height:3.2em}}@media(prefers-reduced-motion:reduce){.ds-card,.ds-card-arrow{transition:none}.ds-card:hover,.ds-card:hover .ds-card-arrow{transform:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Original hardware identity",
+    "overview": "Black and charcoal frame real development-board imagery, heavyweight Montserrat, and vivid logo-green actions. The user-approved dark theme supersedes the cream/forest/Manrope direction entirely. Controls are compact and direct; the existing catalog composition remains intact.",
+    "keyCharacteristics": [
+      "Original raster identity, never a replacement logo drawing.",
+      "Tonal dark surfaces, white text, and functional neon-green emphasis.",
+      "Hardware imagery, visible code, and honest square portrait fallbacks."
+    ],
+    "rules": [
+      {
+        "name": "The Functional Green Rule",
+        "body": "Use green for emphasis and interaction, including the existing large invitation surface; do not introduce a competing UI accent.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Sans Rule",
+        "body": "Keep headings, navigation, member metadata, and body copy in Montserrat; reserve JetBrains Mono for code, filenames, pins, LED readouts, and technical board callouts.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tonal First Rule",
+        "body": "Separate resting UI with charcoal surfaces and dividers; reserve elevated shadows for member-card hover and the modal.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do retain the original logo image and unmodified branded QR assets.",
+      "Do preserve the catalog hierarchy, simulated LED controls, searchable roster, and native profile dialog.",
+      "Do keep selected, disabled, focus, empty, and missing-photo states explicit."
+    ],
+    "donts": [
+      "Don't restore cream/forest surfaces or Manrope; the approved direction is dark Montserrat with neon green.",
+      "Don't imply simulated output is connected hardware or initials are real portraits.",
+      "Don't replace supplied identity assets with SVG redraws or recolored QR codes."
+    ]
+  }
+}

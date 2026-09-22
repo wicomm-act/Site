@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Syne } from "next/font/google";
+import { JetBrains_Mono, Montserrat } from "next/font/google";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteNav } from "@/components/SiteNav";
 import { siteOrigin } from "@/data/team";
 import "./globals.css";
 
-const display = Syne({
+const display = Montserrat({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
-const mono = IBM_Plex_Mono({
-  variable: "--font-mono",
+const mono = JetBrains_Mono({
+  variable: "--font-code",
   subsets: ["latin"],
-  weight: ["400", "500"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s · WICOMM",
   },
   description:
-    "WICOMM is ACSA’s technical sub-club for wireless, embedded, and systems builds.",
+    "Build something real with WICOMM, ACSA’s technical sub-club. Explore ESP32, STM32, embedded hardware, and coding. Meet the people behind the builds.",
   icons: { icon: "/logo-qr.png" },
   openGraph: {
     title: "WICOMM",
@@ -40,11 +40,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
+      data-theme="dark"
       className={`${display.variable} ${mono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        <script id="theme-init" dangerouslySetInnerHTML={{ __html: `try{document.documentElement.dataset.theme=localStorage.getItem("wicomm-theme")==="light"?"light":"dark"}catch{document.documentElement.dataset.theme="dark"}` }} />
+      </head>
       <body className="flex min-h-full flex-col">
+        <a href="#main-content" className="skip-link">Skip to content</a>
         <SiteNav />
-        <div className="flex-1">{children}</div>
+        <div className="flex-1" id="main-content" tabIndex={-1}>{children}</div>
         <SiteFooter />
       </body>
     </html>

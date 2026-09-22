@@ -1,0 +1,78 @@
+.photo {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  isolation: isolate;
+  container-type: inline-size;
+  color: var(--fg);
+  background: var(--panel-raised);
+}
+
+.sage {
+  background: var(--panel-raised);
+}
+
+.mint {
+  color: var(--accent-ink);
+  background: color-mix(in srgb, var(--panel-raised) 70%, var(--line));
+}
+
+.olive {
+  background: color-mix(in srgb, var(--panel-raised) 85%, var(--line));
+}
+
+.fern {
+  color: var(--accent-ink);
+  background: color-mix(in srgb, var(--panel-raised) 65%, var(--panel));
+}
+
+.initials {
+  font-family: inherit;
+  font-size: 64px;
+  font-size: 30cqw;
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: -.04em;
+  user-select: none;
+}
+
+.corner {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 12px;
+  height: 12px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.photo::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 12px;
+  height: 12px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  z-index: -1;
+}
+
+.card {
+  border-radius: inherit;
+}
+
+.profile {
+  border-radius: 4px;
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

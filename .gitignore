@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local design review artifacts
+/.impeccable/review/
+/.impeccable/references/
+/.impeccable/questions/
+/.impeccable/direction-options.json
+/.impeccable/home-brief.md

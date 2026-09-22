@@ -11,7 +11,7 @@ export const club = {
   parent: "ACSA",
   tagline: "The technical wing of ACSA.",
   description:
-    "WICOMM is ACSA’s sub-club for wireless, embedded, and systems work — the people who build the radios, boards, firmware, and networks behind campus tech.",
+    "We’re WICOMM, ACSA’s technical sub-club. A place for curious minds to explore embedded boards, write code, and bring hardware to life.",
 };
 
 export const rosterSections = [

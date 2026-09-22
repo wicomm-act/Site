@@ -3,46 +3,29 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LogoMark } from "@/components/LogoMark";
-
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/team", label: "Team" },
-];
+import { ArrowUpRightIcon } from "@/components/Icons";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function SiteNav() {
   const path = usePathname();
+  const onTeam = path.startsWith("/team");
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line/80 bg-bg/75 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
-        <Link href="/" className="flex items-center gap-3">
-          <LogoMark className="h-7 w-12 text-accent node-pulse" />
-          <span className="leading-tight">
-            <span className="block text-lg font-semibold tracking-tight">
-              WICOMM
-            </span>
-            <span className="block font-mono text-[10px] uppercase tracking-[0.28em] text-muted">
-              ACSA
-            </span>
-          </span>
+    <header className="site-header">
+      <div className="page-width nav-inner">
+        <Link href="/" className="brand" aria-label="WICOMM home">
+          <LogoMark className="brand-mark" />
+          <span className="brand-name">WICOMM<span>A technical sub-club of ACSA</span></span>
         </Link>
-        <nav className="flex items-center gap-1 font-mono text-xs uppercase tracking-[0.18em]">
-          {links.map((l) => {
-            const on =
-              l.href === "/"
-                ? path === "/"
-                : path === l.href || path.startsWith(`${l.href}/`);
-            return (
-              <Link
-                key={l.href}
-                href={l.href}
-                className={`px-3 py-2 ${on ? "text-accent" : "text-muted hover:text-fg"}`}
-              >
-                {l.label}
-              </Link>
-            );
-          })}
+        <nav aria-label="Main navigation" className="main-nav">
+          <Link href="/" aria-current={!onTeam ? "page" : undefined}>Home</Link>
+          <Link href="/#explore" className="explore-nav">What we explore</Link>
+          <Link href="/team" aria-current={onTeam ? "page" : undefined}>The team</Link>
         </nav>
+        <div className="nav-actions">
+          <ThemeToggle />
+          <Link href="/#get-involved" className="nav-contact">Let’s build <ArrowUpRightIcon /></Link>
+        </div>
       </div>
     </header>
   );

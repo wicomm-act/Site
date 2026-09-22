@@ -1,0 +1,792 @@
+.board {
+  color: var(--fg);
+  background: var(--bg);
+  font-family: inherit;
+}
+
+.eyebrow,
+.cardRole,
+.cardMeta,
+.rosterStamp,
+.resultCount,
+.sectionIndex,
+.sectionHeading > p,
+.roleBadge,
+.profileData,
+.textLink,
+.closeButton,
+.unknownUsn {
+  font-family: inherit;
+}
+
+.intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 28px 0 52px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.intro h1 {
+  margin: 24px 0 20px;
+  font-size: clamp(42px, 5.9vw, 78px);
+  font-weight: 800;
+  letter-spacing: -.04em;
+  line-height: 1.04;
+}
+
+.limePeriod {
+  color: var(--accent-ink);
+}
+
+.introText {
+  max-width: 490px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.rosterStamp {
+  flex: 0 0 172px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 22px 14px;
+  padding: 22px;
+  color: var(--on-accent);
+  background: var(--accent);
+  border-radius: 5px;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.stampNumber {
+  grid-column: 1 / -1;
+  font-family: inherit;
+  font-size: 66px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -.04em;
+}
+
+.rosterStamp > svg {
+  align-self: end;
+}
+
+.controls {
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.searchRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: min(100%, 520px);
+  padding: 0 17px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  color: var(--muted);
+}
+
+.searchBox svg {
+  flex-shrink: 0;
+}
+
+.searchBox:focus-within {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.searchBox input {
+  width: 100%;
+  min-width: 0;
+  height: 50px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--fg);
+  font: inherit;
+  font-size: 14px;
+}
+
+.searchBox input::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.resultCount {
+  flex-shrink: 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.filterRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.filter {
+  min-height: 40px;
+  padding: 9px 15px;
+  border: 0;
+  border-radius: 4px;
+  color: var(--fg);
+  background: var(--panel-raised);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.filter:hover {
+  background: var(--line);
+}
+
+.filter.selectedFilter {
+  color: var(--on-accent);
+  background: var(--accent);
+}
+
+.directory {
+  padding-top: 12px;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 30px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.sectionHeading {
+  padding-top: 4px;
+}
+
+.sectionIndex {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.sectionHeading h2 {
+  margin: 12px 0 8px;
+  font-size: 21px;
+  font-weight: 750;
+  letter-spacing: -.03em;
+}
+
+.sectionHeading > p {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.memberGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.card {
+  min-width: 0;
+  display: block;
+  padding: 8px;
+  color: var(--fg);
+  background: var(--panel);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--bg) 45%, transparent), 0 0 0 1px var(--line);
+}
+
+.activeCard {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.cardPhoto {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.cardArrow {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: var(--on-accent);
+  background: var(--accent);
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.card:hover .cardArrow {
+  background: var(--accent-hover);
+  transform: rotate(45deg);
+}
+
+.cardBody {
+  padding: 18px 10px 10px;
+}
+
+.cardRole {
+  margin-bottom: 14px;
+  overflow-wrap: anywhere;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+
+.cardName {
+  min-height: 2.6em;
+  margin: 0 0 7px;
+  font-size: 19px;
+  font-weight: 750;
+  line-height: 1.3;
+  letter-spacing: -.04em;
+  overflow-wrap: anywhere;
+}
+
+.cardMeta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.singleMember {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.singleMember .card {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 20px;
+}
+
+.singleMember .cardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px 22px 18px 0;
+}
+
+.singleMember .cardName {
+  min-height: auto;
+  font-size: clamp(23px, 2.4vw, 32px);
+}
+
+.singleMember .cardMeta {
+  font-size: 11px;
+}
+
+.primaryButton,
+.resetButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 46px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 4px;
+  color: var(--on-accent);
+  background: var(--accent);
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.primaryButton:hover,
+.resetButton:hover {
+  background: var(--accent-hover);
+}
+
+.resetButton {
+  margin-top: 24px;
+}
+
+.emptyState {
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.emptyState .eyebrow {
+  justify-content: center;
+}
+
+.emptyState h2,
+.unknown h2 {
+  margin: 16px 0 12px;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.15;
+  font-weight: 750;
+  letter-spacing: -.035em;
+}
+
+.emptyState > p:not(.eyebrow),
+.unknown > p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.emptyState .primaryButton,
+.unknown .primaryButton {
+  margin-top: 26px;
+}
+
+.dialog {
+  position: fixed;
+  inset: 0;
+  width: min(820px, calc(100% - 32px));
+  max-width: none;
+  max-height: calc(100dvh - 48px);
+  margin: auto;
+  padding: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  color: var(--fg);
+  background: var(--panel);
+  border: 0;
+  border-radius: 8px;
+  font-family: inherit;
+  box-shadow: 0 28px 90px color-mix(in srgb, var(--bg) 70%, transparent);
+}
+
+.dialog::backdrop {
+  background: var(--modal-backdrop);
+  backdrop-filter: blur(4px);
+}
+
+.dialogTop {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 26px;
+  border-bottom: 1px solid var(--line);
+}
+
+.dialogTop .eyebrow {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.closeButton {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 12px;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 4px;
+  color: var(--on-accent);
+  background: var(--accent);
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background: var(--accent-hover);
+}
+
+.closeButton span {
+  font-family: inherit;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.profileMain {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 32px;
+  padding: 32px;
+}
+
+.profilePhoto {
+  align-self: start;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.profileDetails {
+  min-width: 0;
+}
+
+.roleBadge {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 6px 9px;
+  border-radius: 3px;
+  color: var(--on-accent);
+  background: var(--accent);
+  font-size: 11px;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+.profileName {
+  margin: 0 0 14px;
+  font-size: clamp(30px, 4vw, 43px);
+  line-height: 1.1;
+  font-weight: 750;
+  letter-spacing: -.035em;
+  overflow-wrap: anywhere;
+}
+
+.profileData {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 36px;
+  font-size: 12px;
+}
+
+.profileData dt {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.emailLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--fg);
+  font-size: 13px;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.emailLink span {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.emailLink svg {
+  flex-shrink: 0;
+}
+
+.emailLink:hover span {
+  text-decoration: underline;
+}
+
+.profileFooter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 28px;
+  padding: 24px 32px;
+  background: var(--bg);
+}
+
+.qrBlock {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.qrImage {
+  width: 104px;
+  height: 104px;
+  flex-shrink: 0;
+  object-fit: contain;
+  background: #fff;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.qrTitle {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 750;
+  letter-spacing: -.025em;
+}
+
+.textLink {
+  color: var(--accent-ink);
+  font-size: 10px;
+  line-height: 1.8;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+
+.textLink:hover {
+  text-decoration-thickness: 2px;
+}
+
+.textLink > svg {
+  display: inline-block;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.canonical {
+  min-width: 0;
+}
+
+.canonical .eyebrow {
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.unknown {
+  padding: 40px 32px 48px;
+}
+
+.unknownUsn {
+  color: var(--fg);
+  overflow-wrap: anywhere;
+}
+
+.board a:focus-visible,
+.board button:focus-visible,
+.dialog a:focus-visible,
+.dialog button:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 4px;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (min-width: 1400px) {
+  .section {
+    grid-template-columns: 200px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .section {
+    grid-template-columns: 135px minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .memberGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .singleMember {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .intro {
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 32px;
+  }
+
+  .intro h1 {
+    font-size: clamp(39px, 7.5vw, 53px);
+  }
+
+  .rosterStamp {
+    display: none;
+  }
+
+  .introText {
+    font-size: 14px;
+  }
+
+  .searchRow {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .searchBox {
+    width: 100%;
+  }
+
+  .filterRow {
+    gap: 6px;
+  }
+
+  .filter {
+    padding-inline: 12px;
+    font-size: 11px;
+  }
+
+  .section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 28px 0;
+  }
+
+  .sectionHeading {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .sectionHeading h2 {
+    margin: 0;
+  }
+
+  .sectionHeading > p {
+    margin-left: auto;
+  }
+
+  .memberGrid {
+    gap: 12px;
+  }
+
+  .profileMain {
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 22px;
+    padding: 24px;
+  }
+
+  .profileFooter {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 440px) {
+  .card {
+    padding: 6px;
+  }
+
+  .cardBody {
+    padding: 14px 5px 8px;
+  }
+
+  .cardName {
+    font-size: 17px;
+    min-height: 3.9em;
+    margin-bottom: 12px;
+  }
+
+  .cardRole {
+    min-height: 3.2em;
+    font-size: 11px;
+  }
+
+  .cardMeta {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 11px;
+  }
+
+  .singleMember .card {
+    grid-template-columns: 114px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .singleMember .cardBody {
+    padding: 6px 8px 6px 0;
+  }
+
+  .singleMember .cardName {
+    font-size: 21px;
+    margin: 6px 0 12px;
+  }
+
+  .singleMember .cardRole {
+    min-height: auto;
+  }
+
+  .singleMember .cardMeta {
+    font-size: 11px;
+  }
+
+  .dialogTop {
+    padding: 12px 16px;
+  }
+
+  .dialogTop .eyebrow {
+    max-width: 140px;
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .profileMain {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 20px;
+  }
+
+  .profilePhoto {
+    width: 160px;
+  }
+
+  .profileName {
+    margin-bottom: 20px;
+  }
+
+  .profileFooter,
+  .unknown {
+    padding: 24px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .cardArrow,
+  .filter {
+    transition: none;
+  }
+
+  .card:hover,
+  .card:hover .cardArrow {
+    transform: none;
+  }
+}

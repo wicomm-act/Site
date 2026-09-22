@@ -20,7 +20,7 @@ export default async function TeamMemberPage({
 }: PageProps<"/team/u/[usn]">) {
   const { usn } = await params;
   return (
-    <main className="mx-auto max-w-6xl px-5 py-14">
+    <main className="page-width team-shell">
       <TeamBoard selectedUsn={usn} />
     </main>
   );

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function TeamPage() {
   return (
-    <main className="mx-auto max-w-6xl px-5 py-14">
+    <main className="page-width team-shell">
       <TeamBoard />
     </main>
   );
