@@ -46,6 +46,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <head>
         <script id="theme-init" dangerouslySetInnerHTML={{ __html: `try{document.documentElement.dataset.theme=localStorage.getItem("wicomm-theme")==="light"?"light":"dark"}catch{document.documentElement.dataset.theme="dark"}` }} />
+        {process.env.NODE_ENV === "development" ? (
+          <script
+            id="browser-hydration-guard"
+            dangerouslySetInnerHTML={{
+              __html: `(()=>{const a="data-supercharge-ref",clean=n=>{if(n.nodeType!==1)return;n.removeAttribute(a);n.querySelectorAll("["+a+"]").forEach(e=>e.removeAttribute(a))},o=new MutationObserver(ms=>ms.forEach(m=>{if(m.type==="attributes")m.target.removeAttribute(a);else m.addedNodes.forEach(clean)}));o.observe(document,{subtree:true,childList:true,attributes:true,attributeFilter:[a]});addEventListener("load",()=>setTimeout(()=>o.disconnect(),2000),{once:true})})()`
+            }}
+          />
+        ) : null}
       </head>
       <body className="flex min-h-full flex-col">
         <a href="#main-content" className="skip-link">Skip to content</a>

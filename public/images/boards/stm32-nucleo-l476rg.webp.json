@@ -1,0 +1,22 @@
+{
+  "title": "STM32 Nucleo L-series",
+  "picturedKit": "NUCLEO-L476RG",
+  "sourcePageUrl": "https://docs.zephyrproject.org/latest/boards/st/nucleo_l476rg/doc/index.html",
+  "sourceImageUrl": "https://docs.zephyrproject.org/latest/_images/nucleo_l476rg.jpg",
+  "resolvedImageUrl": "https://docs.zephyrproject.org/latest/_images/nucleo_l476rg.jpg",
+  "retrievedAt": "2026-09-22T18:11:42.091088+00:00",
+  "sourceImageSha256": "567ad4149e1746787bc0872a6a24e60091bf63b31e3ab2dfcc7b6f26196b094c",
+  "sourceDimensions": {
+    "width": 250,
+    "height": 250
+  },
+  "localPath": "/images/boards/stm32-nucleo-l476rg.webp",
+  "filePath": "/home/r3ap3reditz/codes/wicommm-site/public/images/boards/stm32-nucleo-l476rg.webp",
+  "width": 250,
+  "height": 250,
+  "processing": [
+    "Auto-oriented; resized without enlargement to a maximum of 900 pixels; stripped metadata; converted to WebP quality 88 using ImageMagick."
+  ],
+  "aiGenerated": false,
+  "rightsNote": "Image sourced from the linked publisher; no separate reuse license verified."
+}

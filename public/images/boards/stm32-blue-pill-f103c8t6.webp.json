@@ -1,0 +1,22 @@
+{
+  "title": "STM32 Blue Pill F-series",
+  "picturedKit": "STM32F103C8T6 Blue Pill board",
+  "sourcePageUrl": "https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html",
+  "sourceImageUrl": "https://stm32-base.org/assets/img/boards/STM32F103C8T6_Blue_Pill-1.jpg",
+  "resolvedImageUrl": "https://stm32-base.org/assets/img/boards/STM32F103C8T6_Blue_Pill-1.jpg",
+  "retrievedAt": "2026-09-22T18:11:43.659888+00:00",
+  "sourceImageSha256": "d49000b8989932ddbe3a086210e2daddaa0c83ef0b89126c2f62d93575a5ef23",
+  "sourceDimensions": {
+    "width": 1920,
+    "height": 1280
+  },
+  "localPath": "/images/boards/stm32-blue-pill-f103c8t6.webp",
+  "filePath": "/home/r3ap3reditz/codes/wicommm-site/public/images/boards/stm32-blue-pill-f103c8t6.webp",
+  "width": 900,
+  "height": 600,
+  "processing": [
+    "Auto-oriented; resized without enlargement to a maximum of 900 pixels; stripped metadata; converted to WebP quality 88 using ImageMagick."
+  ],
+  "aiGenerated": false,
+  "rightsNote": "Image sourced from the linked publisher; no separate reuse license verified."
+}

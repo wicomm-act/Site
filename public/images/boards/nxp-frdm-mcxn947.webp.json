@@ -1,0 +1,22 @@
+{
+  "title": "NXP FRDM-MCXN947",
+  "picturedKit": "FRDM-MCXN947",
+  "sourcePageUrl": "https://www.nxp.com/design/design-center/development-boards-and-designs/FRDM-MCXN947",
+  "sourceImageUrl": "https://www.nxp.com/assets/images/en/dev-board-image/FRDM-MCXN947-ANGLE.jpg",
+  "resolvedImageUrl": "https://www.nxp.com/assets/images/en/dev-board-image/FRDM-MCXN947-ANGLE.jpg",
+  "retrievedAt": "2026-09-22T18:11:44.671095+00:00",
+  "sourceImageSha256": "8fdd945a2939d85f16a9535e41ccf7f06c868e659577a394050602c589e9483b",
+  "sourceDimensions": {
+    "width": 2048,
+    "height": 1152
+  },
+  "localPath": "/images/boards/nxp-frdm-mcxn947.webp",
+  "filePath": "/home/r3ap3reditz/codes/wicommm-site/public/images/boards/nxp-frdm-mcxn947.webp",
+  "width": 900,
+  "height": 506,
+  "processing": [
+    "Auto-oriented; resized without enlargement to a maximum of 900 pixels; stripped metadata; converted to WebP quality 88 using ImageMagick."
+  ],
+  "aiGenerated": false,
+  "rightsNote": "Image sourced from the linked publisher; no separate reuse license verified."
+}
