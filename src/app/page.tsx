@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowIcon, ArrowUpRightIcon, ChipIcon, CodeIcon, SignalIcon } from "@/components/Icons";
 import { BoardLab } from "@/components/BoardLab";
+import { HardwareCarousel } from "@/components/HardwareCarousel";
 import { MemberPhoto } from "@/components/MemberPhoto";
 import { club, members } from "@/data/team";
 
@@ -20,15 +20,7 @@ export default function HomePage() {
           <p>{club.description}</p>
           <div className="hero-actions"><Link href="#explore" className="button button-dark">Explore WICOMM <ArrowIcon /></Link><Link href="/team" className="text-link">Meet the team <ArrowUpRightIcon /></Link></div>
         </div>
-        <figure className="hero-hardware">
-          <div className="hardware-topline"><span>IDEAS IN. POSSIBILITIES OUT.</span><ChipIcon /></div>
-          <div className="hardware-orbit" aria-hidden="true" />
-          <span className="board-side-note" aria-hidden="true">DESIGNED TO BE BUILT ON</span>
-          <Image src="/images/esp32-s3.webp" alt="An ESP32-S3 development board with a wireless module, input/output pins, and USB connectors" width={674} height={561} preload className="hero-board" />
-          <span className="board-callout callout-radio"><span />Wi-Fi + Bluetooth LE</span>
-          <span className="board-callout callout-pins"><span />A whole world of I/O</span>
-          <figcaption><div><span className="board-caption-name">ESP32-S3</span><span className="board-caption-detail">Small board. Endless starting points.</span></div><span className="hardware-chip">Hardware, meet curiosity.</span></figcaption>
-        </figure>
+        <HardwareCarousel />
       </section>
 
       <div className="discipline-strip"><div className="page-width"><span>A technical sub-club of <strong>ACSA</strong></span><div><span>Embedded systems</span><span>Creative coding</span><span>Connected hardware</span></div><span className="strip-symbol" aria-hidden="true"><CodeIcon /></span></div></div>
